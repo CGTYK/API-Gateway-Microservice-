@@ -21,7 +21,5 @@ func coffeeHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/coffee", coffeeHandler)
-	http.HandleFunc("/coffee/pour-over", pourOverHandler)
-	http.HandleFunc("/coffee/aeropress", aeropressHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
